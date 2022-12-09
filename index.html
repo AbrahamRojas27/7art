@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/public/styles/slider.css">
+    <link rel="stylesheet" href="/public/styles/app.css">
+    <title>7art</title>
+</head>
+<body class="h-screen bg-gradient-to-t from-gray-800 to-sky-800 bg-fixed">
+   
+    <header class="flex space-x-80 p-4 bg-sky-900 justify-center w-full h-20 ease-linear duration-300" id="header">
+        <div>
+            <ul class="flex space-x-4">
+                <li class="font-semibold text-white hover:text-black text-lg p-2 hover:bg-white rounded-xl ease-in duration-300"><a href="">Peliculas</a></li>
+                <li class="font-semibold text-white hover:text-black text-lg p-2 hover:bg-white rounded-xl ease-in duration-300"><a href="">Series</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h1 class="text-3xl font-bold text-white">7art</h1>
+        </div>
+
+        <div>
+            <form id="searchForm">
+                <input class="rounded-xl p-2 mr-2" type="text" placeholder="Search...">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path class="fill-current text-white p-2" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+
+            <!-- Slider main container -->
+            <div class="swiper w-full h-[540px] group">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide relative">
+                    <figure class="w-full h-full">
+                        <img class="w-full h-full" src="https://fondosmil.com/fondo/54336.png" alt="">
+                    </figure>
+                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
+                        <div class="w-1/2">
+                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <figure class="w-full h-full">
+                        <img class="w-full h-full" src="https://movilforum.com/wp-content/uploads/2021/10/fondos-de-pantalla-4k-scaled.jpg" alt="">
+                    </figure>
+                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
+                        <div class="w-1/2">
+                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <figure class="w-full h-full">
+                        <img class="w-full h-full" src="https://fondosmil.com/fondo/17010.jpg" alt="">
+                    </figure>
+                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
+                        <div class="w-1/2">
+                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <figure class="w-full h-full">
+                        <img class="w-full h-full" src="https://i.pinimg.com/originals/34/1b/8f/341b8faf772adb974fe7c309ba9758a5.png" alt="">
+                    </figure>
+                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
+                        <div class="w-1/2">
+                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
+                        </div>
+                    </div>
+                </div>
+                ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev text-white opacity-0 group-hover:opacity-100 ease-out duration-300"></div>
+                <div class="swiper-button-next text-white opacity-0 group-hover:opacity-100 ease-out duration-300"></div>
+            </div>
+
+        </section>
+    
+        <section id="recommended" class="mt-16 p-4">
+
+            <div class="mb-4">
+                <h2 class="text-xl text-white font-semibold">Recomendados</h2>
+                <p class="text-lg text-white">Disfruta de las mejores muestras del septimo arte</p>
+            </div>
+
+            <div class="grid grid-flow-col justify-center items-center space-x-4"> 
+
+                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
+                    <figure class="w-full h-full">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
+                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
+                    </div>
+                </div>
+                
+                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
+                    <figure class="w-full h-full">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
+                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
+                    </div>
+                </div>
+
+                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
+                    <figure class="w-full h-full">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
+                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
+                    </div>
+                </div>
+
+                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
+                    <figure class="w-full h-full">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
+                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
+                    </div>
+                </div>
+
+                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
+                    <figure class="w-full h-full">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
+                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
+                    </div>
+                </div>
+
+                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
+                    <figure class="w-full h-full">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
+                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
+                    </div>
+                </div>
+           
+            </div>
+        </section>
+
+        <section id="categories" class="p-4 mt-16">
+
+            <div class="mb-8">
+                <h3 class="text-white text-xl font-semibold text-center">Categorias</h3>
+            </div>
+
+            <div id="categoriesContainer" class="flex justify-center items-center space-x-8">
+                <div id="accion" class="w-24 group">
+                    <button class="w-24 h-2 bg-red-900 group-hover:bg-red-600 group-hover:scale-125  ease-linear duration-300"></button>
+                    <p class="text-white text-center group-hover:font-semibold group-hover:scale-125 ease-linear duration-200">Accion</p>
+                </div>
+
+                <div id="comedia" class="w-24 group">
+                    <button class="w-24 h-2 bg-yellow-600 group-hover:bg-yellow-300 group-hover:scale-125 ease-linear duration-300"></button>
+                    <p class="text-white text-center group-hover:font-semibold group-hover:scale-125 ease-linear duration-200">Comedia</p>
+                </div>
+
+                <div id="terror" class="w-24 group">
+                    <button class="w-24 h-2 bg-gray-900 group-hover:bg-gray-600 group-hover:scale-125 ease-linear duration-300"></button>
+                    <p class="text-white text-center group-hover:font-semibold group-hover:scale-125 ease-linear duration-200">Terror</p>
+                </div>
+
+                <div id="suspenso" class="w-24 group">
+                    <button class="w-24 h-2 bg-sky-900 group-hover:bg-sky-600 group-hover:scale-125 ease-linear duration-300"></button>
+                    <p class="text-white text-center group-hover:font-semibold group-hover:scale-125 ease-linear duration-200">Suspenso</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>
