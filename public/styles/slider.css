@@ -1,0 +1,12 @@
+.swiper .swiper-button-prev{
+    --swiper-navigation-size: 20px;
+}
+
+.swiper .swiper-button-next{
+    --swiper-navigation-size: 20px;
+}
+
+
+.swiper-pagination{
+    --swiper-theme-color: white;
+}

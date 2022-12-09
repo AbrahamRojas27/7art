@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active-header{
+    @apply fixed top-0 w-full h-16 z-10 p-4 bg-gray-900 bg-opacity-90
+}
