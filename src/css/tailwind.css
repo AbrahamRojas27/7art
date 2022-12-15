@@ -5,3 +5,16 @@
 .active-header{
     @apply fixed top-0 w-full h-16 z-10 p-4 bg-gray-900 bg-opacity-90
 }
+
+.movie-card{
+    @apply w-48 h-72 hover:scale-105 ease-in duration-200
+}
+
+.card-hero{
+    @apply col-start-1 col-end-13 row-start-1 h-full pointer-events-none ease-in duration-300 opacity-0 -z-10
+}
+
+.card--show{
+    @apply opacity-100 pointer-events-auto
+}
+

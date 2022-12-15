@@ -4,33 +4,54 @@ window.addEventListener('scroll', () =>{
     menu.classList.toggle('active-header', window.scrollY >0)
 })
 
-// slider
+// consumo de API
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  effect: 'fade',
-  autoplay: {
-    delay: 10000,
-    pauseOnMouseEnter: true,
-    disableOnInteraction: false,
-  },
+// hero
+const sliderHero = [...document.querySelectorAll('.card-hero')]
+const next = document.getElementById('next')
+const before = document.getElementById('before')
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+next.addEventListener('click', () => changePosition(1))
+before.addEventListener('click', () => changePosition(-1))
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+function changePosition(change){
+  const currentElement = Number(document.querySelector('.card--show').dataset.id)
+  
+  let value = currentElement
+  value +=change
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+  if(value === 0 || value === sliderHero.length+1){
+    value = value === 0 ? sliderHero.length : 1
+  }
+
+  sliderHero[currentElement-1].classList.toggle('card--show')
+  sliderHero[value-1].classList.toggle('card--show')
+
+  console.log(value)
+}
+
+// recommended section
+async function getTrendingMoviesPreview(){
+  const res = await fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=' + API_KEY);
+  const data = await res.json();
+  const prevImgUrl = 'https://image.tmdb.org/t/p/original'
+  const sliderContainer = document.getElementById('sliderRecommended')
+  
+  const movies = data.results;
+  
+  movies.forEach(movie => {
+  const movieCard = document.createElement('div')
+  movieCard.classList.add('movie-card')
+
+  const movieImg = document.createElement('img')
+  movieImg.setAttribute('src', `${prevImgUrl}${movie.poster_path}`)
+
+  movieCard.appendChild(movieImg)
+
+  sliderContainer.appendChild(movieCard)
+  });
+}
+
+getTrendingMoviesPreview()
+
+ 

@@ -4,176 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="/public/styles/slider.css">
     <link rel="stylesheet" href="/public/styles/app.css">
     <title>7art</title>
 </head>
-<body class="h-screen bg-gradient-to-t from-gray-800 to-sky-800 bg-fixed">
+<body class="bg-gradient-to-t from-gray-800 to-sky-800 bg-fixed">
    
-    <header class="flex space-x-80 p-4 bg-sky-900 justify-center w-full h-20 ease-linear duration-300" id="header">
-        <div>
-            <ul class="flex space-x-4">
-                <li class="font-semibold text-white hover:text-black text-lg p-2 hover:bg-white rounded-xl ease-in duration-300"><a href="">Peliculas</a></li>
-                <li class="font-semibold text-white hover:text-black text-lg p-2 hover:bg-white rounded-xl ease-in duration-300"><a href="">Series</a></li>
-            </ul>
-        </div>
+    <header>
+        <nav class="flex z-90 absolute top-0 space-x-80 p-4 justify-center w-full h-20 ease-linear duration-300" id="header">
+            <div>
+                <ul class="flex space-x-4">
+                    <li class="font-semibold text-white hover:text-black text-lg p-2 hover:bg-white rounded-xl ease-in duration-300"><a href="">Peliculas</a></li>
+                    <li class="font-semibold text-white hover:text-black text-lg p-2 hover:bg-white rounded-xl ease-in duration-300"><a href="">Series</a></li>
+                </ul>
+            </div>
 
-        <div>
-            <h1 class="text-3xl font-bold text-white">7art</h1>
-        </div>
+            <div>
+                <h1 class="text-3xl font-bold text-white">7art</h1>
+            </div>
 
-        <div>
-            <form id="searchForm">
-                <input class="rounded-xl p-2 mr-2" type="text" placeholder="Search...">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path class="fill-current text-white p-2" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            <div>
+                <form id="searchForm">
+                    <input class="rounded-xl p-2 mr-2" type="text" placeholder="Search...">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path class="fill-current text-white p-2" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <section id="hero" class="-mt-20 w-full">
+
+            <div id="heroSlider" class="grid grid-cols-12 grid-rows-1 items-center w-full h-[80vh]">
+                <button id="before" class="flex text-white text-4xl col-start-1 row-start-1 justify-center"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+                        <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
                     </svg>
                 </button>
-            </form>
-        </div>
-    </header>
 
-    <main>
-        <section id="hero">
+                <button id="next" class="flex text-white text-4xl col-start-12 row-start-1 justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                        <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                    </svg>
+                </button>
 
-            <!-- Slider main container -->
-            <div class="swiper w-full h-[540px] group">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide relative">
-                    <figure class="w-full h-full">
-                        <img class="w-full h-full" src="https://fondosmil.com/fondo/54336.png" alt="">
-                    </figure>
-                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
-                        <div class="w-1/2">
-                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide relative">
-                    <figure class="w-full h-full">
-                        <img class="w-full h-full" src="https://movilforum.com/wp-content/uploads/2021/10/fondos-de-pantalla-4k-scaled.jpg" alt="">
-                    </figure>
-                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
-                        <div class="w-1/2">
-                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide relative">
-                    <figure class="w-full h-full">
-                        <img class="w-full h-full" src="https://fondosmil.com/fondo/17010.jpg" alt="">
-                    </figure>
-                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
-                        <div class="w-1/2">
-                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide relative">
-                    <figure class="w-full h-full">
-                        <img class="w-full h-full" src="https://i.pinimg.com/originals/34/1b/8f/341b8faf772adb974fe7c309ba9758a5.png" alt="">
-                    </figure>
-                    <div class="flex w-full h-full items-end p-8 absolute top-0 bg-black bg-opacity-50">
-                        <div class="w-1/2">
-                            <p class="text-3xl text-white font-semibold">Titulo de Pelicula</p>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis magnam impedit eveniet dolore obcaecati reiciendis quidem hic ea aperiam dolor, explicabo cum quae est officiis nemo repudiandae veniam dignissimos aliquid!</p>
-                        </div>
-                    </div>
-                </div>
-                ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev text-white opacity-0 group-hover:opacity-100 ease-out duration-300"></div>
-                <div class="swiper-button-next text-white opacity-0 group-hover:opacity-100 ease-out duration-300"></div>
+                <div data-id="1" class="card-hero card--show"><img class="w-full h-full" src="https://static.canalapps.com/uploads/2020/08/fondos-de-pantalla-canalapps.jpg" alt=""></div>
+                <div data-id="2" class="card-hero"><img class="w-full h-full" src="https://fondosmil.com/fondo/17010.jpg" alt=""></div>
+                <div data-id="3" class="card-hero"><img class="w-full h-full" src="https://i.pinimg.com/originals/d8/39/74/d839742a057e1d111d0373fa614de906.jpg" alt=""></div>
+                
             </div>
 
         </section>
-    
-        <section id="recommended" class="mt-16 p-4">
+    </header>
 
-            <div class="mb-4">
+    <main>
+        <section id="recommended" class="mt-16 p-4 space-y-4">
+            <div>
                 <h2 class="text-xl text-white font-semibold">Recomendados</h2>
                 <p class="text-lg text-white">Disfruta de las mejores muestras del septimo arte</p>
             </div>
 
-            <div class="grid grid-flow-col justify-center items-center space-x-4"> 
-
-                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
-                    <figure class="w-full h-full">
-                        <img src="" alt="">
-                    </figure>
-                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
-                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
-                    </div>
-                </div>
-                
-                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
-                    <figure class="w-full h-full">
-                        <img src="" alt="">
-                    </figure>
-                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
-                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
-                    </div>
-                </div>
-
-                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
-                    <figure class="w-full h-full">
-                        <img src="" alt="">
-                    </figure>
-                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
-                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
-                    </div>
-                </div>
-
-                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
-                    <figure class="w-full h-full">
-                        <img src="" alt="">
-                    </figure>
-                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
-                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
-                    </div>
-                </div>
-
-                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
-                    <figure class="w-full h-full">
-                        <img src="" alt="">
-                    </figure>
-                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
-                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
-                    </div>
-                </div>
-
-                <div id="movieCardRecommended" class="w-48 h-72 bg-gray-500 group relative">
-                    <figure class="w-full h-full">
-                        <img src="" alt="">
-                    </figure>
-                    <div class="flex items-center w-full h-full bg-black bg-opacity-50 text-2xl text-white font-bold opacity-0 group-hover:opacity-100 ease-linear duration-300 absolute top-0">
-                        <p id="movieNameCard" class="m-auto text-center">Nombre de Pelicula</p>
-                    </div>
-                </div>
-           
+            <div id="recommendedMovies" class="w-full overflow-hidden">
+                <div id="sliderRecommended" class="grid h-96 grid-flow-col items-center gap-2 overflow-x-auto overscroll-x-contain"></div>
             </div>
         </section>
 
-        <section id="categories" class="p-4 mt-16">
+        <section id="categories" class="p-4 mt-16 space-y-4">
 
-            <div class="mb-8">
+            <div>
                 <h3 class="text-white text-xl font-semibold text-center">Categorias</h3>
             </div>
 
@@ -199,9 +98,150 @@
                 </div>
             </div>
         </section>
+
+        <section id="lista-generica" class="p-4 space-y-4">
+            <div>
+                <h3 class="text-xl text-white font-semibold">Peliculas</h3>
+            </div>
+            <div class="grid laptop:grid-cols-4 tablet:grid-cols-2  gap-8">
+                <div class="w-72 h-96 bg-white relative group">
+                    <img src="" alt="">
+                    <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                        <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                        <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                    </div>
+                </div>
+
+                <div class="w-72 h-96 bg-white relative group">
+                    <img src="" alt="">
+                    <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                        <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                        <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                    </div>
+                </div>
+
+                <div class="w-72 h-96 bg-white relative group">
+                    <img src="" alt="">
+                    <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                        <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                        <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                    </div>
+                </div>
+
+                <div class="w-72 h-96 bg-white relative group">
+                    <img src="" alt="">
+                    <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                        <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                        <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="movieDetails" class="space-y-4 hidden">
+            <div class="w-full">
+                <figure class="w-full h-[70vh]">
+                    <img class="w-full h-full" src="https://www.solofondos.com/wp-content/uploads/2021/03/wp6400060-scaled.jpg" alt="">
+                </figure>
+
+                <div class="pt-4 mb-8 p-4 bg-gradient-to-b from-black">
+                    <h4 class="text-3xl text-white font-bold">Titulo de la pelicula</h4>
+                    <p class="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid odit perspiciatis nihil. Cum, repudiandae ad facilis praesentium eligendi, vitae harum blanditiis maiores soluta quaerat et totam beatae, quod repellat laudantium.</p>
+                    <div class="flex mt-[12px] space-x-4">
+                        <p class="flex text-white tex-xl font-semibold"><span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                        <p class="flex text-white tex-xl font-semibold"><span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                        <p class="flex text-white tex-xl font-semibold"><span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                    </div>
+                </div>
+
+                <div id="MovieDetailsSlider" class="p-4">
+                    <h5 class="text-xl text-white font-semibold mb-4">Mas contenido como este</h5>
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide grid grid-cols-4 gap-6">
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide grid grid-cols-4 gap-6">
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                            <div class="w-72 h-96 bg-white relative group">
+                                <img src="" alt="">
+                                <div class="flex flex-col justify-end h-full w-full p-4 space-y-2 bg-gradient-to-t from-gray-900 absolute bottom-0 opacity-0 group-hover:opacity-100 ease-in duration-300" >
+                                    <p class="text-white text-xl font-semibold">Titulo de pelicula</p>
+                                    <p class="flex text-white"> <span class="block w-4 h-4 bg-black mr-2 mt-[5px]"></span> Categoria</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+                        ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+        </section>
     </main>
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./src/js/secrets.js"></script>
     <script src="../src/js/main.js"></script>
 </body>
-</html>
