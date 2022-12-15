@@ -549,6 +549,9 @@ video {
 .h-20 {
   height: 5rem;
 }
+.h-\[80vh\] {
+  height: 80vh;
+}
 .h-full {
   height: 100%;
 }
@@ -563,9 +566,6 @@ video {
 }
 .h-\[70vh\] {
   height: 70vh;
-}
-.h-\[80vh\] {
-  height: 80vh;
 }
 .w-full {
   width: 100%;
@@ -743,9 +743,6 @@ video {
 }
 .opacity-0 {
   opacity: 0;
-}
-.opacity-100 {
-  opacity: 1;
 }
 .duration-300 {
   transition-duration: 300ms;
